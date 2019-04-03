@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_124404) do
+ActiveRecord::Schema.define(version: 2019_03_29_134851) do
 
   create_table "event_venues", force: :cascade do |t|
     t.string "name"
@@ -68,9 +68,9 @@ ActiveRecord::Schema.define(version: 2019_04_03_124404) do
     t.string "email"
     t.string "password"
     t.string "address"
+    t.integer "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "phone"
   end
 
 end

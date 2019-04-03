@@ -9,6 +9,6 @@ end
 class User < ApplicationRecord
   has_many :orders
   validates :email, presence: true, email: true
-  validates :password, presence: true, format:{with: /^[A-Za-z0-9]+$/}, length: {in:8..12}
-  validates : phone, presence: true, numericality: {only_integer: true}, length: {in:9..12}
+  validates :password, presence: true, format: {with: /\A^([a-zA-Z0-9]{8,12})\z/i, message: "password must be only alphanumeric and between 8 and 12 characters"}
+  validates :phone, presence: true, length: {in: 9..12}
 end
